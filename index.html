@@ -1,30 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KOBITA</title>
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseWave Music</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<canvas id="bg"></canvas>
+  <!-- SCENE 1: Piano Animation -->
+  <div id="pianoScene">
 
-<div class="content">
-    <h1 class="logo">KOBITA</h1>
+    <!-- Falling cord/string -->
+    <div class="cord" id="cord">
+      <div class="cord-line"></div>
+      <div class="cord-tip"></div>
+    </div>
 
-    <p class="tagline">
-        Where Every Beat Tells a Story
-    </p>
+    <!-- Piano -->
+    <div class="piano" id="piano">
+      <div class="piano-body">
+        <!-- White keys -->
+        <div class="key white" data-note="0"></div>
+        <div class="key white" data-note="1"></div>
+        <div class="key white" data-note="2"></div>
+        <div class="key white" data-note="3"></div>
+        <div class="key white" data-note="4"></div>
+        <div class="key white" data-note="5"></div>
+        <div class="key white" data-note="6"></div>
+        <div class="key white" data-note="7"></div>
+        <div class="key white" data-note="8"></div>
+        <div class="key white" data-note="9"></div>
+        <div class="key white" data-note="10"></div>
+        <div class="key white" data-note="11"></div>
+        <div class="key white" data-note="12"></div>
+        <div class="key white" data-note="13"></div>
 
-    <button id="enterBtn">
-        ENTER EXPERIENCE
-    </button>
-</div>
+        <!-- Black keys -->
+        <div class="key black" style="left:36px"></div>
+        <div class="key black" style="left:86px"></div>
+        <div class="key black" style="left:186px"></div>
+        <div class="key black" style="left:236px"></div>
+        <div class="key black" style="left:286px"></div>
+        <div class="key black" style="left:386px"></div>
+        <div class="key black" style="left:436px"></div>
+        <div class="key black" style="left:536px"></div>
+        <div class="key black" style="left:586px"></div>
+        <div class="key black" style="left:636px"></div>
+      </div>
 
-<script src="script.js"></script>
+      <!-- Glow effect on piano -->
+      <div class="piano-glow"></div>
+    </div>
 
+    <!-- Spark particles container -->
+    <div id="sparks"></div>
+
+    <!-- Sound wave ripples -->
+    <div id="ripples"></div>
+  </div>
+
+  <!-- SCENE 2: Name Reveal -->
+  <div id="nameReveal">
+    <div class="reveal-flash"></div>
+    <h1 class="site-name">
+      <span class="letter">P</span>
+      <span class="letter">u</span>
+      <span class="letter">l</span>
+      <span class="letter">s</span>
+      <span class="letter">e</span>
+      <span class="letter">W</span>
+      <span class="letter">a</span>
+      <span class="letter">v</span>
+      <span class="letter">e</span>
+    </h1>
+    <p class="site-tagline">Feel the Music. Live the Vibe.</p>
+    <button id="enterBtn">Enter the World</button>
+
+    <!-- Background floating notes -->
+    <div class="floating-notes">
+      <span>♪</span>
+      <span>♫</span>
+      <span>♬</span>
+      <span>♩</span>
+      <span>♪</span>
+      <span>♫</span>
+      <span>♬</span>
+      <span>♩</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
