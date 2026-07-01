@@ -551,3 +551,137 @@ body {
     font-size: 16px;
   }
 }
+/* ========= PREMIUM AURORA ========= */
+
+.aurora{
+    position:fixed;
+    width:700px;
+    height:700px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.35;
+    pointer-events:none;
+    animation:auroraMove 18s ease-in-out infinite alternate;
+}
+
+.a1{
+    background:#00e5ff;
+    top:-250px;
+    left:-180px;
+}
+
+.a2{
+    background:#8a2eff;
+    bottom:-280px;
+    right:-200px;
+    animation-delay:4s;
+}
+
+.a3{
+    background:#00ff99;
+    top:40%;
+    left:45%;
+    animation-delay:8s;
+}
+
+@keyframes auroraMove{
+    0%{
+        transform:translate(0,0) scale(1);
+    }
+    100%{
+        transform:translate(180px,-120px) scale(1.4);
+    }
+}
+
+/* Mouse Glow */
+
+#mouseGlow{
+    position:fixed;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    pointer-events:none;
+    background:radial-gradient(circle,
+    rgba(0,229,255,.28),
+    transparent 70%);
+    filter:blur(20px);
+    transform:translate(-50%,-50%);
+    z-index:5;
+}
+
+/* 3D Piano */
+
+#piano3d{
+    position:absolute;
+    bottom:90px;
+    left:50%;
+    transform:translateX(-50%) perspective(1000px) rotateX(60deg);
+}
+
+#piano3d .top{
+    width:360px;
+    height:20px;
+    background:#161616;
+    border-radius:8px 8px 0 0;
+}
+
+#piano3d .keys{
+    display:flex;
+}
+
+#piano3d .white{
+    width:45px;
+    height:170px;
+    background:white;
+    border:1px solid #ccc;
+    transition:.2s;
+}
+
+#piano3d .white:hover{
+    background:#00e5ff;
+    box-shadow:0 0 20px #00e5ff;
+    transform:translateY(5px);
+}
+
+/* Floating Notes */
+
+#notes{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+#notes span{
+    position:absolute;
+    bottom:-60px;
+    color:#00e5ff;
+    opacity:.18;
+    font-size:32px;
+animation:noteFloat 10s linear infinite;
+}
+#notes span:nth-child(1){left:8%;}
+#notes span:nth-child(2){left:22%;animation-delay:1s;}
+#notes span:nth-child(3){left:38%;animation-delay:2s;}
+#notes span:nth-child(4){left:54%;animation-delay:3s;}
+#notes span:nth-child(5){left:70%;animation-delay:4s;}
+#notes span:nth-child(6){left:84%;animation-delay:5s;}
+#notes span:nth-child(7){left:94%;animation-delay:6s;}
+
+@keyframes noteFloat{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.35;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
