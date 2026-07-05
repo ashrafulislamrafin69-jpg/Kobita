@@ -685,3 +685,64 @@ animation:noteFloat 10s linear infinite;
     }
 
 }
+.music-library{
+    padding:30px 20px;
+    min-height:100vh;
+    background:linear-gradient(180deg,#0b1022,#111827,#071f2d);
+}
+
+.music-library h2{
+    color:white;
+    text-align:center;
+    font-size:32px;
+}
+
+.owner{
+    color:#00e5ff;
+    text-align:center;
+    margin-bottom:30px;
+    letter-spacing:2px;
+}
+
+.music-card{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:12px;
+    margin:15px 0;
+    box-shadow:0 0 25px rgba(0,255,255,.2);
+}
+
+.music-card img{
+    width:70px;
+    height:70px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+.music-card h3{
+    color:white;
+    margin-left:15px;
+}
+
+.music-card p{
+    color:#bbb;
+    margin-left:15px;
+    font-size:14px;
+}
+
+.music-card button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#00d4ff;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    box-shadow:0 0 20px #00d4ff;
+}
